@@ -1,25 +1,21 @@
 <div id="page" class="container">
-  <nav role="navigation">
-    <div id="menuToggle">
+  <div >
+    <div class="hamburger" (click)="toggleMenu()" >
+      <div [ngClass]="{'bar-change1': openedMenu}" class="bar"></div>
+      <div [ngClass]="{'bar-change2': openedMenu}" class="bar"></div>
+      <div [ngClass]="{'bar-change3': openedMenu}" class="bar"></div>
+    </div>
 
-      <input type="checkbox"/>
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-      <!--
-      Too bad the menu has to be inside of the button
-      but hey, it's pure CSS magic.
-      -->
-      <ul id="menu">
+    <div [ngClass]="{'menu-open-active': openedMenu}" class="menu-open" id="menu" >
+      <ul fxLayout="column" fxLayoutAlign="space-around center">
         <li><a routerLink="/about">About me</a></li>
         <li><a routerLink="/">Contact</a></li>
         <li><a routerLink="/">Social media</a></li>
         <li><a routerLink="/">Careers</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
+
   <app-about style="z-index: 100"></app-about>
 
 </div>
