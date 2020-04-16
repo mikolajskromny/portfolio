@@ -1,19 +1,38 @@
 <div id="page" class="container">
-  <div id="header">
-    <div id="logo">
-      <img src="/src/assets/pic02.jpg" alt="pic02" />
-      <h1><a href="#">Privy</a></h1>
-      <span>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></span>
-    </div>
-    <div id="menu">
-      <ul>
-        <li class="current_page_item"><a routerLink="/about">About me</a></li>
-        <li><a routerLink="/about">Our Clients</a></li>
-        <li><a href="#" accesskey="3" title="">About Us</a></li>
-        <li><a href="#" accesskey="4" title="">Careers</a></li>
-        <li><a href="#" accesskey="5" title="">Contact Us</a></li>
+  <!--<div class="menu_btn">
+    <a (click)="toggleMenu()" class="d-lg-inline-block menu_btn">
+      <span></span> <span></span> <span></span>
+    </a>
+  </div>-->
+  <!--<div [ngClass]="{'menu-open-active': openedMenu}" class="menu-open" id="menu">
+    <ul>
+      <li><a routerLink="/about">About me</a></li>
+      <li><a routerLink="/">Contact</a></li>
+      <li><a routerLink="/">Social media</a></li>
+      <li><a routerLink="/">Careers</a></li>
+    </ul>
+  </div>-->
+  <nav role="navigation">
+    <div id="menuToggle">
+
+      <input type="checkbox"/>
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+      <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+      <ul id="menu">
+        <li><a routerLink="/about">About me</a></li>
+        <li><a routerLink="/">Contact</a></li>
+        <li><a routerLink="/">Social media</a></li>
+        <li><a routerLink="/">Careers</a></li>
       </ul>
     </div>
-  </div>
-  <app-about></app-about>
+  </nav>
+  <app-about style="z-index: 100"></app-about>
+
 </div>
