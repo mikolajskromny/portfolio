@@ -17,6 +17,10 @@ ol, ul {
 
 p {
   line-height: 180%;
+  font-family: 'Fira Code', monospace;
+  font-weight: 300;
+  font-size: 1em;
+  color: white;
 }
 
 strong {
@@ -30,16 +34,22 @@ a:hover {
   text-decoration: none;
 }
 
-.container {
+.description {
+
+}
+
+#main {
   overflow: hidden;
-  margin: 0em auto;
-  width: 1200px;
-  padding: 0;
-  background: #202020;
-  font-family: 'Open Sans', sans-serif;;
-  font-size: 12pt;
-  font-weight: 300;
-  color: #444444;
+  float: none;
+  padding: 3em 200px 20px 200px;
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 100vh;
+  background-image: url("../../../assets/background_main .jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*********************************************************************************/
@@ -244,22 +254,10 @@ $black: #282936;
 
 * {
   box-sizing: border-box;
+
   &::before, &::after {
     box-sizing: border-box;
   }
-}
-
-body {
-  font-family: 'Fira Code', monospace;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  min-height: 100vh;
-  background: $bg;
 }
 
 button {
@@ -275,11 +273,13 @@ button {
   font-size: inherit;
   font-family: 'Fira Code', monospace;
   font-weight: 400;
+
   &.download-cv {
     width: 12rem;
     height: auto;
+
     .circle {
-      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
       position: relative;
       display: block;
       margin: 0;
@@ -287,19 +287,22 @@ button {
       height: 3rem;
       background: $black;
       border-radius: 1.625rem;
+
       .icon {
-        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
         background: $white;
+
         &.arrow {
-          @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
           left: 0.625rem;
           width: 1.125rem;
           height: 0.125rem;
           background: none;
+
           &::before {
             position: absolute;
             content: '';
@@ -314,8 +317,9 @@ button {
         }
       }
     }
+
     .button-text {
-      @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, .076, 1));
       position: absolute;
       top: 0;
       left: 0;
@@ -330,9 +334,11 @@ button {
       text-transform: lowercase;
     }
   }
+
   &:hover {
     .circle {
       width: 100%;
+
       .icon {
         &.arrow {
           background: $white;
@@ -340,6 +346,7 @@ button {
         }
       }
     }
+
     .button-text {
       color: $white;
     }
@@ -349,22 +356,6 @@ button {
 .dwnld-btn {
 
 }
-
-@supports (display: grid) {
-  body {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.625rem;
-    grid-template-areas: ". main main ." ". main main .";
-  }
-
-/*  #download-btn {
-    grid-area: main;
-    align-self: center;
-    justify-self: center;
-  }*/
-}
-
 
 
 .button {
@@ -403,8 +394,7 @@ button {
 
 .box1,
 .box2,
-.box3
-{
+.box3 {
   float: left;
   margin-right: 20px;
 }
@@ -424,8 +414,7 @@ button {
 }
 
 .boxA,
-.boxB
-{
+.boxB {
   float: left;
   margin-right: 20px;
 }
@@ -475,8 +464,6 @@ button {
 }
 
 
-
-
 #menu .icon {
 }
 
@@ -490,18 +477,11 @@ button {
 }
 
 
-
 /*********************************************************************************/
 /* Main                                                                          */
 /*********************************************************************************/
 
-#main {
-  overflow: hidden;
-  float: none;
-  padding: 3em 50px 5em 50px;
-  text-align: center;
-  margin: 0 200px 0 200px;
-}
+
 
 /*********************************************************************************/
 /* Featured                                                                      */
@@ -528,36 +508,7 @@ button {
 #footer {
 }
 
-/*********************************************************************************/
-/* Copyright                                                                     */
-/*********************************************************************************/
 
-#copyright {
-  overflow: hidden;
-  padding: 5em 0em;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-#copyright span {
-  display: block;
-  letter-spacing: 0.20em;
-  line-height: 2.5em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 0.80em;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-#copyright a {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.fa {
-  display: block;
-  color: #000;
-  background: red;
-}
 
 
 /*********************************************************************************/

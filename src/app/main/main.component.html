@@ -1,21 +1,24 @@
-<div class="background-image"></div>
-<div id="page" class="container">
-  <div >
-    <div class="hamburger" (click)="toggleMenu()" >
-      <div [ngClass]="{'bar-change1': openedMenu}" class="bar"></div>
-      <div [ngClass]="{'bar-change2': openedMenu}" class="bar"></div>
-      <div [ngClass]="{'bar-change3': openedMenu}" class="bar"></div>
-    </div>
-
-    <div [ngClass]="{'menu-open-active': openedMenu}" class="menu-open" id="menu" >
-      <ul fxLayout="column" fxLayoutAlign="space-around center">
-        <li><a routerLink="/about">About me</a></li>
-        <li><a routerLink="/">Contact</a></li>
-        <li><a routerLink="/">Social media</a></li>
-        <li><a routerLink="/">Careers</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <app-about></app-about>
+<div [ngClass]="{'menu-open-active': openedMenu}" class="menu-open" id="menu">
+  <ul fxLayout="column" fxLayoutAlign="space-around center">
+    <li><a routerLink="/about">About me</a></li>
+    <li><a routerLink="/">Media</a></li>
+    <li><a routerLink="/">Contact</a></li>
+  </ul>
 </div>
+
+<!--
+<div id="page" class="container">
+
+</div>-->
+<div class="hamburger" (click)="toggleMenu()">
+  <div [ngClass]="{'bar-change1': openedMenu}" class="bar"></div>
+  <div [ngClass]="{'bar-change2': openedMenu}" class="bar"></div>
+  <div [ngClass]="{'bar-change3': openedMenu}" class="bar"></div>
+</div>
+<perfect-scrollbar class="scroll-container" [config]="config" [scrollIndicators]="false">
+  <div class="components">
+    <app-about></app-about>
+    <app-copyright></app-copyright>
+  </div>
+</perfect-scrollbar>
+

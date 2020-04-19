@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {PerfectScrollbarComponent, PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +9,8 @@ import {Component, OnInit} from '@angular/core';
 export class MainComponent implements OnInit {
 
   public openedMenu = false;
+  public config: PerfectScrollbarConfigInterface = {};
+  @ViewChild(PerfectScrollbarComponent, { static: false }) componentRef?: PerfectScrollbarComponent;
 
   constructor() {
   }
