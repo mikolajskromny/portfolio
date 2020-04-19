@@ -10,7 +10,7 @@ export class MainComponent implements OnInit {
 
   public openedMenu = false;
   public config: PerfectScrollbarConfigInterface = {};
-  @ViewChild(PerfectScrollbarComponent, { static: false }) componentRef?: PerfectScrollbarComponent;
+  @ViewChild(PerfectScrollbarComponent, {static: false}) componentRef?: PerfectScrollbarComponent;
 
   constructor() {
   }
